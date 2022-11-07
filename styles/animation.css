@@ -1,0 +1,105 @@
+.open-animation-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 19;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: start .6s linear 1s 1 both;
+}
+
+.open-animation-block img{
+    animation: logoanimation .6s linear 1 both ;
+}
+
+.img-revolut-wrap img,
+.list-logo-box a,
+.list-logo li,
+.btn,
+.section-companies li,
+.section-todolist a,
+.lrnmr,
+.list-flex a,
+.case-study a,
+.flex-holder a {
+    transition: all .3s;
+}
+
+.list-nav-fix li:hover,
+.case-study a:hover,
+.img-revolut-wrap img:hover,
+.lrnmr:hover,
+.section-todolist a:hover {
+    transform: translateX(3px);
+}
+
+.list-logo-box a:hover,
+.section-companies li:hover {
+    transform: scale(1.1);
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px black;
+}
+
+.list-logo li:hover,
+.list-flex a:hover{
+    transform: translateY(-2px);
+}
+
+.wrapper::before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: #FF6336;
+    animation: end 1s linear .6s 1 both;
+}
+
+.flex-holder a{
+    animation: last .7s linear infinite alternate;
+}
+
+@keyframes last {
+    from{
+        transform: rotate(-5deg);
+    }
+    to{
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes logoanimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes end {
+    from{
+        top: 0;
+        left: -100%;
+    }
+    to{
+        top: 0;
+        left: 100%
+    }
+}
+
+@keyframes start {
+    from{
+        top: 0;
+        left: 0;
+    }
+    to{
+        top: 0;
+        left: 100%;
+    }
+}
